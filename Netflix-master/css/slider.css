@@ -1,0 +1,131 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden
+}
+
+.last-wrapper {
+    margin-bottom: 60px
+}
+
+.carousel {
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none
+}
+
+.carousel::-webkit-scrollbar {
+    height: 0
+}
+
+.next,
+.prev {
+    justify-content: center;
+    align-content: center;
+    background: #fff;
+    border: none;
+    height: 100%;
+    width: 56px;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    background-color: rgba(0, 7, 0, .7)
+}
+
+.prev {
+    top: 0;
+    left: 0;
+    fill: #eee
+}
+
+.next {
+    top: 0;
+    right: 0;
+    display: none;
+    fill: #eee
+}
+
+.content {
+    display: grid;
+    grid-gap: 0;
+    grid-auto-flow: column
+}
+
+.movie-h {
+    margin-left: 5px;
+    position: relative
+}
+
+.movie-h:first-child {
+    margin-right: 60px
+}
+
+.img-overlay-h {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    transition-duration: .5s
+}
+
+.hide {
+    opacity: 0
+}
+
+.movie-h:hover .img-overlay-h {
+    opacity: 1
+}
+
+.img-overlay-h {
+    padding: 5px 10px 0 26px
+}
+
+.img-overlay-h .btn-play {
+    width: 28px;
+    height: 28px
+}
+
+.img-overlay-h .hover-h-title {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 1.2px;
+    line-height: 21px
+}
+
+.img-overlay-h .movie-info {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    align-items: baseline
+}
+
+.img-overlay-h .movie-info .match {
+    color: #46d36a;
+    font-size: 13px;
+    letter-spacing: .4px;
+    margin-left: 3px
+}
+
+.img-overlay-h .movie-info .age-rate-s {
+    font-size: 11px;
+    letter-spacing: .3px;
+    padding: 1px 5px;
+    border: 1px solid #fff;
+    margin-left: 3px
+}
+
+.img-overlay-h .movie-info .time {
+    font-size: 11px;
+    letter-spacing: .3px;
+    margin-left: 3px
+}
+
+.img-overlay-h .description-h {
+    font-size: 11px
+}

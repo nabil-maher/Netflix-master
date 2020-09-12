@@ -1,0 +1,9 @@
+{
+  "name": "Netflix",
+  "short_name": "Netflix",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#141414"
+}

@@ -1,0 +1,854 @@
+@font-face {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../../assets/fonts/muli.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+}
+
+@font-face {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../assets/fonts/muli-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+}
+
+@font-face {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../assets/fonts/muli-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+}
+
+@font-face {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../assets/fonts/muli-vitnamese.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+}
+
+@font-face {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../assets/fonts/muli-latin-ext-bold.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+}
+
+@font-face {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../assets/fonts/latin-bold.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+}
+
+@font-face {
+    font-family: DroidArabicKufiBold;
+    src: url(../assets/fonts/DroidArabicKufiBold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: DroidArabicKufiRegular;
+    src: url(../assets/fonts/DroidArabicKufiRegular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url(../assets/fonts/DroidArabicKufiBold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url(../assets/fonts/DroidArabicKufiRegular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+body {
+    font-family: Muli;
+    width: 100%;
+    background: #000;
+    margin: 0;
+    padding: 0;
+    color: #eee;
+    overflow-x: hidden
+}
+
+@media (max-width:670px) {
+    .desktop-content {
+        display: none
+    }
+}
+
+@media (min-width:670px) {
+    .mobile-content {
+        display: none
+    }
+}
+
+select::-ms-expand {
+    display: none
+}
+
+.selectdiv select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    max-width: 140px;
+    height: 30px;
+    margin: 5px 0;
+    padding: 0 24px 0 14px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #eee;
+    background: rgba(0, 0, 0, .390314);
+    backdrop-filter: blur(27.1828px);
+    -webkit-backdrop-filter: blur(27.1828px);
+    border-radius: 25px;
+    background-image: none;
+    border: 1px solid #ccc;
+    -ms-word-break: normal;
+    word-break: normal;
+    margin: -40 0 0 0;
+    cursor: pointer;
+    outline: 0
+}
+
+.selct-down-icon {
+    margin: -28 -46 0 0;
+    z-index: 2;
+    position: absolute
+}
+
+.modal {
+    display: none;
+    background: rgba(0, 0, 0, .390314);
+    backdrop-filter: blur(27.1828px);
+    -webkit-backdrop-filter: blur(27.1828px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -21px;
+    width: 400px;
+    height: 108%;
+    overflow: hidden;
+    overflow-y: hidden;
+    z-index: 999;
+}
+
+.hide {
+    display: none
+}
+
+.show {
+    display: block
+}
+
+.download-select {
+    text-align: center;
+    margin: 20 0 0 0;
+}
+
+.download-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: DroidArabicKufiRegular;
+    background-color: #fff;
+    padding: 5 10 5 10;
+    font-size: 18px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 0
+}
+
+.modal-content {
+    text-align: -webkit-center;
+    margin: 2%
+}
+
+.row {
+    display: inline-block;
+    max-width: 300px
+}
+
+.download-btn {
+    font-family: DroidArabicKufiRegular;
+    padding: 10 20 10 20;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 10 5 0 5;
+    outline: 0;
+    cursor: pointer;
+}
+
+.big {
+    padding: 9px 17px 9px 16px;
+}
+
+.close {
+    position: absolute;
+    margin: 10 20 0 0;
+    opacity: .8
+}
+
+@media (min-width:670px) {
+    header {
+        width: 100%;
+        height: 31px
+    }
+
+    .heder-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-items: center;
+        margin: 20px
+    }
+
+    .logo {
+        position: fixed;
+        padding-left: 13px;
+        margin: 17px 40 0 13;
+        width: 100;
+        cursor: pointer;
+        outline: 0;
+        z-index: 11;
+    }
+
+    .page-title {
+        font-family: Helvetica Neue LT Std;
+        position: fixed;
+        font-size: 15px;
+        margin: 30px 150px 0 0;
+        font-size: 22px;
+    }
+
+    .menu {
+        position: fixed;
+        width: 17px;
+        left: 41px;
+        top: 22px;
+        cursor: pointer;
+        outline: 0
+    }
+
+    .search {
+        position: fixed;
+        width: 17px;
+        left: 81px;
+        top: 22px;
+        cursor: pointer;
+        outline: 0
+    }
+
+    .container {
+        height: 530px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -21px 0 0 0;
+    }
+
+    .background-blur {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .0001);
+        backdrop-filter: blur(6.5914px);
+        -webkit-backdrop-filter: blur(6.5914px)
+    }
+
+    .desktop-div {
+        display: inline-flex;
+        margin-top: 6%;
+    }
+
+    .poster {
+        width: 230px;
+        height: 355px;
+        margin: 40 60 0 0;
+        box-shadow: 0 18px 52px rgba(0, 0, 0, .5);
+        border-radius: 8px
+    }
+
+    .desktop-div {
+        display: flex
+    }
+
+    .seasons-number {
+        font-family: DroidArabicKufiRegular;
+        margin: 0 0 -23 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 23px;
+        color: #fff;
+        mix-blend-mode: normal;
+        opacity: .5
+    }
+
+    .desktop-title {
+        font-family: Helvetica Neue LT Std;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 86px;
+        letter-spacing: -1.68px;
+        color: #fff
+    }
+
+    .desktop-description {
+        margin: 49 20 0 0;
+        width: 600px
+    }
+
+    .description-text {
+        font-family: DroidArabicKufiRegular;
+        margin: 0 0 0 30;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 22px;
+        color: #fff;
+        mix-blend-mode: normal;
+        opacity: .5
+    }
+
+    .selectdiv {
+        margin: 0 120 0 0
+    }
+
+    .selct-down-icon {
+        margin: -29px 129px 0 0
+    }
+
+    .Desktop-trailer-button {
+        background: #fff;
+        color: #000;
+        border: .5px solid rgba(0, 0, 0, .65);
+        border-radius: 5px;
+        font-family: DroidArabicKufiRegular;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        margin: 20 0 20 0;
+        padding: 10 20 10 20;
+        cursor: pointer;
+        outline: 0
+    }
+
+    .secendary {
+        background: linear-gradient(0deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), rgba(255, 255, 255, .2);
+        background-blend-mode: normal, overlay;
+        backdrop-filter: blur(27.1828px);
+        -webkit-backdrop-filter: blur(27.1828px);
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: -.303333px;
+        color: #fff;
+        mix-blend-mode: normal;
+        opacity: .6
+    }
+
+    .actor-big-container {
+        margin: 15px 0 0 0;
+        display: inline-flex
+    }
+
+    .actor-big {
+        border-radius: 100%;
+        width: 60px;
+        height: 60px;
+        margin: 0 0 0 10px;
+        object-fit: cover;
+        outline: 0
+    }
+
+    .slider {
+        display: flex;
+        margin: -20 60 20 0;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll
+    }
+
+    .slider-title {
+        font-family: DroidArabicKufiRegular;
+        position: absolute;
+        margin: -40 60 0 0;
+        font-size: 20px;
+        z-index: 1
+    }
+
+    .episode {
+        margin: 0 0 10 10;
+        position: relative;
+        display: inline-block;
+        cursor: pointer
+    }
+
+    .episode-img {
+        width: 300;
+        height: 172px;
+        border-radius: 8px;
+        margin: 0 0 10 0
+    }
+
+
+    .overlay {
+        background: #000;
+        background-blend-mode: normal, overlay;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        width: 300px;
+        height: 172px;
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity .5s;
+        text-align-last: center
+    }
+
+    .overlay:hover {
+        opacity: .5
+    }
+
+    .watch {
+        background: 0 0;
+        border: 0;
+        margin: 70 0 0 0;
+        cursor: pointer;
+        outline: 0
+    }
+
+    .downlaod {
+        position: absolute;
+        top: 11%;
+        right: 3%;
+        background: 0 0;
+        border: 1px solid #eee;
+        border-radius: 25px;
+        margin: -10 0 0 14;
+        background: rgba(0, 0, 0, .390314);
+        backdrop-filter: blur(27.1828px);
+        -webkit-backdrop-filter: blur(27.1828px);
+        cursor: pointer;
+        outline: 0
+    }
+
+    .ep-number {
+        position: absolute;
+        top: 78%;
+        left: 0;
+        background: rgba(0, 0, 0, .390314);
+        backdrop-filter: blur(27.1828px);
+        -webkit-backdrop-filter: blur(27.1828px);
+        border-radius: 0 10px 0 5px;
+        padding: 5px
+    }
+    
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border: 0 none gray;
+        border-radius: 63px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #696969;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background-color: #696969
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, .2)
+    }
+}
+
+@media (max-width:670px) {
+    header {
+        width: 100%;
+        height: 31px
+    }
+
+    .heder-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-items: center;
+        place-content: center;
+        margin: 20px
+    }
+
+    .logo {
+        position: fixed;
+        padding-left: 13px;
+        border-left: .4px solid #fff;
+        margin: 10 -60 0 13;
+        outline: 0
+    }
+
+    .page-title {
+        position: fixed;
+        font-size: 15px;
+        margin: 10 29 0 0
+    }
+
+    .menu {
+        position: fixed;
+        width: 10px;
+        left: 41px;
+        top: 22px;
+        outline: 0
+    }
+
+    .search {
+        position: fixed;
+        width: 17px;
+        right: 41px;
+        top: 22px;
+        outline: 0
+    }
+
+    .container {
+        text-align: center;
+        margin-top: 20px
+    }
+
+    .poster {
+        width: auto;
+        height: 67%;
+        border-radius: 5px
+    }
+
+    .Episode-container {
+        margin: 10 0 0 0
+    }
+
+    .play_btn {
+        background: linear-gradient(90deg, rgba(34, 34, 34, .0001) -18.41%, #222 65.28%);
+        border: 0;
+        padding: 6 30 6 90;
+        color: #eee;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 25px;
+        border-top-left-radius: -25px;
+        border-bottom-left-radius: -25px;
+        cursor: pointer;
+        outline: 0 !important
+    }
+
+    button:focus {
+        outline: 0
+    }
+
+    .play_btn2 {
+        background: linear-gradient(-90deg, rgba(34, 34, 34, .0001) -18.41%, #222 65.28%);
+        border: 0;
+        padding: 6 90 6 30;
+        color: #eee;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 25px;
+        border-top-left-radius: -25px;
+        border-bottom-left-radius: -25px;
+        cursor: pointer
+    }
+
+    .sel {
+        position: relative;
+        box-shadow: 0 13px 53px rgba(215, 43, 50, .4);
+        background: #d81f26;
+        border: 0;
+        padding: 6 30 6 30;
+        color: #eee;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 25px;
+        margin: 0 -70 0 0
+    }
+
+    .sel2 {
+        position: relative;
+        box-shadow: 0 13px 53px rgba(215, 43, 50, .4);
+        background: #d81f26;
+        border: 0;
+        padding: 6 30 6 30;
+        color: #eee;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 25px;
+        margin: 0 0 0 -70
+    }
+
+    .selcted {
+        width: 22px;
+        z-index: 22;
+        position: absolute;
+        margin-top: 30px;
+        margin: 30 -63 0 0
+    }
+
+    .selcted2 {
+        width: 22px;
+        z-index: 22;
+        position: absolute;
+        margin-top: 30px;
+        margin: 30 -167 0 0
+    }
+
+    .slider {
+        margin: 20 0 0 10%;
+        display: flex;
+        flex-wrap: nowrap;
+        direction: ltr;
+        overflow-y: hidden;
+        overflow-x: scroll
+    }
+
+    .slider-movie {
+        margin: 20 0 0 10%;
+        display: block;
+        direction: ltr;
+        overflow-y: hidden;
+        overflow-x: scroll
+    }
+
+    .slider2 {
+        margin: 20 0 0 10%;
+        display: flex;
+        flex-wrap: nowrap;
+        direction: ltr;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        justify-content: center
+    }
+
+    .episode {
+        margin: 0 0 10 10;
+        position: relative;
+        display: inline-block;
+        cursor: pointer
+    }
+
+    .episode-img {
+        width: 130px;
+        height: 80px;
+        float: left;
+        border-radius: 5px
+    }
+
+    .movie-img {
+        width: 83%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .overlay {
+        background: #000;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        width: 130px;
+        height: 80px;
+        border-radius: 5px;
+        opacity: 0;
+        transition: opacity .5s
+    }
+
+    .overlay-movie {
+        width: 100%;
+        height: 100%;
+    }
+
+    .overlay:active .overlay:focus,
+    .overlay:hover {
+        opacity: .5
+    }
+
+    .watch {
+        background: 0 0;
+        border: 0;
+        margin: 20 0 0 30%;
+        cursor: pointer;
+        outline: 0
+    }
+
+    .watch-movie {
+        background: 0 0;
+        border: 0;
+        margin: 50px 0 0 33%;
+        cursor: pointer;
+        outline: 0;
+    }
+
+
+    .ep-number {
+        position: absolute;
+        top: 63%;
+        left: 0;
+        background: rgba(0, 0, 0, .390314);
+        backdrop-filter: blur(27.1828px);
+        -webkit-backdrop-filter: blur(27.1828px);
+        border-radius: 0 10px 0 5px;
+        padding: 5px
+    }
+
+    .movie-number {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .390314);
+        backdrop-filter: blur(27.1828px);
+        -webkit-backdrop-filter: blur(27.1828px);
+        border-radius: 0 10px 0 5px;
+        padding: 5px;
+    }
+
+    .hide {
+        display: none
+    }
+
+    .show {
+        display: block
+    }
+
+    .actor {
+        margin: 0 0 20 10;
+        position: relative;
+        display: inline-block;
+        cursor: pointer
+    }
+
+    .actor-img {
+        width: 70px;
+        border-radius: 25px;
+        float: left;
+        border-radius: 100%
+    }
+
+    .trailer-img {
+        margin: 10 13 0 90px;
+        background: 0 0
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border: 0 none transparent;
+        border-radius: 63px
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: transparent
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background-color: transparent
+    }
+
+    ::-webkit-scrollbar-track {
+        background: 0 0
+    }
+
+    .noSelect {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent
+    }
+
+    .modal {
+        background: rgba(0, 0, 0, .390314);
+        backdrop-filter: blur(27.1828px);
+        -webkit-backdrop-filter: blur(27.1828px);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: hidden;
+        z-index: 999
+    }
+
+    .modal-content {
+        margin: 20 0 0 0
+    }
+
+    .nav-bar {
+        position: fixed;
+        height: 68px;
+        bottom: 0;
+        width: 100%;
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, .01) 0, rgba(0, 0, 0, .01) 20%, rgba(0, 0, 0, .65) 77%, rgba(0, 0, 0, .65) 100%);
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, .01) 0, rgba(0, 0, 0, .01) 20%, rgba(0, 0, 0, .65) 77%, rgba(0, 0, 0, .65) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .01) 0, rgba(0, 0, 0, .01) 20%, rgba(0, 0, 0, .65) 77%, rgba(0, 0, 0, .65) 100%);
+        z-index: 10
+    }
+
+    .nav-icons {
+        width: 100%;
+        text-align: -webkit-center;
+        position: fixed;
+        bottom: 10
+    }
+
+    .nav-icon {
+        width: 17px;
+        height: 24px;
+        margin: 0 8% 0 8%
+    }
+
+    body,
+    html {
+        max-width: 100%;
+        overflow-x: hidden
+    }
+}
